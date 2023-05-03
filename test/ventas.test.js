@@ -3,7 +3,7 @@ import { ListaDeProductos } from '../src/repositories/listaDeProductos/listaDePr
 import { ventasService } from '../src/services/ventas.service.js'
 
 
-ListaDeProductos.prods.push(new Producto({id:1, precio: 1000, stock: 3}))
+ListaDeProductos.guardar(new Producto({id:1, precio: 1000, stock: 3}))
 
 const venta = await ventasService.vender({id: 1, cantidad: 3})
 

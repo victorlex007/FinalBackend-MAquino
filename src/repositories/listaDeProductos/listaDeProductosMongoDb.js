@@ -15,6 +15,10 @@ export class ListaDeProductosMongoDb {
         return buscado
     }
 
+    async guardar(prod){
+        await this.prods.insertOne(prod)
+    }
+
 }
 
 export const listaDeProductos = new ListaDeProductosMongoDb(mongoClient)
